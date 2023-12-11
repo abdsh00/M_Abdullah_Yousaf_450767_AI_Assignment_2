@@ -5,12 +5,12 @@
 #include <algorithm>
 using namespace std;
 
-const int N = 3; //Puzzle Size
+const int N = 3;
 const vector<vector<int>> goalState = {{0, 1, 2}, {3, 4, 5}, {6, 7, 8}};
 
 struct PuzzleState {
     vector<vector<int>> state;
-    int gValue; // Cost to reach the current state
+    int gValue;
     int heuristic;
 
     PuzzleState(vector<vector<int>> s, int g) : state(s), gValue(g), heuristic(calculateManhattanHeuristic(s)) {}
